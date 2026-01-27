@@ -1,0 +1,144 @@
+Product Import Error Log - 2026-01-27 15:04:51
+================================================================================
+
+Encoding: utf-8
+Delimiter: ','
+Header: ['name', 'sku', 'description', 'price', 'stock_quantity', 'weight']
+Column Mapping: {'name': 0, 'sku': 1, 'description': 2, 'price': 3, 'stock_quantity': 4, 'weight': 5}
+--------------------------------------------------------------------------------
+
+Product Import Error Log - 2026-01-27 15:04:51
+================================================================================
+
+Encoding: utf-8
+Delimiter: ','
+Total rows processed: 30
+Successful: 28
+Failed: 2
+Success rate: 93.3%
+Duplicates handled: Update existing
+--------------------------------------------------------------------------------
+
+Row 2: ['Laptop Pro', 'LP-1000', 'High-performance business laptop with 16GB RAM', ' 512GB SSD', ' i7 processor', '1299.99', '50', '2.5']
+  ❌ PRE-VALIDATION ERRORS:
+     • Invalid price format: Invalid numeric value '512GBSSD': could not convert string to float: '512GBSSD'
+     • Invalid stock quantity format: Invalid numeric value 'i7processor': invalid literal for int() with base 10: 'i7processor'
+     Raw data: {'name': 'Laptop Pro', 'sku': 'LP-1000', 'description': 'High-performance business laptop with 16GB RAM', 'price': '512GB SSD', 'stock_quantity': 'i7 processor', 'weight': 1299.99}
+
+Row 3: ['Wireless Mouse', 'WM-200', 'Ergonomic wireless mouse with rechargeable battery', '29.99', '200', '0.2']
+  Extracted data: {'name': 'Wireless Mouse', 'sku': 'WM-200', 'description': 'Ergonomic wireless mouse with rechargeable battery', 'price': 29.99, 'stock_quantity': 200, 'weight': 0.2}
+  ✅ CREATED new product: WM-200
+
+Row 4: ['Monitor 27"', 'MN-2700', '4K UHD Monitor with HDR and 144Hz refresh rate', '499.99', '25', '7.8']
+  Extracted data: {'name': 'Monitor 27"', 'sku': 'MN-2700', 'description': '4K UHD Monitor with HDR and 144Hz refresh rate', 'price': 499.99, 'stock_quantity': 25, 'weight': 7.8}
+  ✅ CREATED new product: MN-2700
+
+Row 5: ['Keyboard Mechanical', 'KB-500', 'Gaming mechanical keyboard with RGB backlight', '89.99', '75', '1.1']
+  Extracted data: {'name': 'Keyboard Mechanical', 'sku': 'KB-500', 'description': 'Gaming mechanical keyboard with RGB backlight', 'price': 89.99, 'stock_quantity': 75, 'weight': 1.1}
+  ✅ CREATED new product: KB-500
+
+Row 6: ['Webcam HD', 'WC-800', '1080p Webcam with dual microphones and privacy shutter', '59.99', '100', '0.3']
+  Extracted data: {'name': 'Webcam HD', 'sku': 'WC-800', 'description': '1080p Webcam with dual microphones and privacy shutter', 'price': 59.99, 'stock_quantity': 100, 'weight': 0.3}
+  ✅ CREATED new product: WC-800
+
+Row 7: ['Gaming Headset', 'GH-900', 'Wireless gaming headset with 7.1 surround sound', '149.99', '30', '0.45']
+  Extracted data: {'name': 'Gaming Headset', 'sku': 'GH-900', 'description': 'Wireless gaming headset with 7.1 surround sound', 'price': 149.99, 'stock_quantity': 30, 'weight': 0.45}
+  ✅ CREATED new product: GH-900
+
+Row 8: ['External SSD 1TB', 'SSD-1000', 'Portable NVMe SSD with USB-C 3.2 Gen 2', '129.99', '80', '0.08']
+  Extracted data: {'name': 'External SSD 1TB', 'sku': 'SSD-1000', 'description': 'Portable NVMe SSD with USB-C 3.2 Gen 2', 'price': 129.99, 'stock_quantity': 80, 'weight': 0.08}
+  ✅ CREATED new product: SSD-1000
+
+Row 9: ['USB-C Hub', 'UCH-400', '7-in-1 USB-C Hub with 4K HDMI', ' PD charging', '65.99', '150', '0.15']
+  ❌ PRE-VALIDATION ERRORS:
+     • Invalid price format: Invalid numeric value 'PDcharging': could not convert string to float: 'PDcharging'
+     Raw data: {'name': 'USB-C Hub', 'sku': 'UCH-400', 'description': '7-in-1 USB-C Hub with 4K HDMI', 'price': 'PD charging', 'stock_quantity': 65, 'weight': 150.0}
+
+Row 10: ['Power Bank 20000mAh', 'PB-2000', 'High-capacity power bank with QC 3.0 and PD', '79.99', '120', '0.35']
+  Extracted data: {'name': 'Power Bank 20000mAh', 'sku': 'PB-2000', 'description': 'High-capacity power bank with QC 3.0 and PD', 'price': 79.99, 'stock_quantity': 120, 'weight': 0.35}
+  ✅ CREATED new product: PB-2000
+
+Row 11: ['Bluetooth Speaker', 'BS-600', 'Portable waterproof Bluetooth speaker with 20hr battery', '89.99', '60', '0.68']
+  Extracted data: {'name': 'Bluetooth Speaker', 'sku': 'BS-600', 'description': 'Portable waterproof Bluetooth speaker with 20hr battery', 'price': 89.99, 'stock_quantity': 60, 'weight': 0.68}
+  ✅ CREATED new product: BS-600
+
+Row 12: ['Tablet 10.5"', 'TB-1050', 'Android tablet with stylus support and 128GB storage', '349.99', '25', '0.48']
+  Extracted data: {'name': 'Tablet 10.5"', 'sku': 'TB-1050', 'description': 'Android tablet with stylus support and 128GB storage', 'price': 349.99, 'stock_quantity': 25, 'weight': 0.48}
+  ✅ CREATED new product: TB-1050
+
+Row 13: ['Smart Watch', 'SW-700', 'Fitness smartwatch with GPS and heart rate monitor', '199.99', '45', '0.05']
+  Extracted data: {'name': 'Smart Watch', 'sku': 'SW-700', 'description': 'Fitness smartwatch with GPS and heart rate monitor', 'price': 199.99, 'stock_quantity': 45, 'weight': 0.05}
+  ✅ CREATED new product: SW-700
+
+Row 14: ['Printer All-in-One', 'PR-800', 'Wireless color printer with scanner and copier', '249.99', '15', '9.5']
+  Extracted data: {'name': 'Printer All-in-One', 'sku': 'PR-800', 'description': 'Wireless color printer with scanner and copier', 'price': 249.99, 'stock_quantity': 15, 'weight': 9.5}
+  ✅ CREATED new product: PR-800
+
+Row 15: ['Router Wi-Fi 6', 'RT-6000', 'Wi-Fi 6 router with mesh capability and parental controls', '179.99', '40', '1.2']
+  Extracted data: {'name': 'Router Wi-Fi 6', 'sku': 'RT-6000', 'description': 'Wi-Fi 6 router with mesh capability and parental controls', 'price': 179.99, 'stock_quantity': 40, 'weight': 1.2}
+  ✅ CREATED new product: RT-6000
+
+Row 16: ['Docking Station', 'DS-900', 'Thunderbolt 4 docking station with dual 4K support', '299.99', '20', '0.75']
+  Extracted data: {'name': 'Docking Station', 'sku': 'DS-900', 'description': 'Thunderbolt 4 docking station with dual 4K support', 'price': 299.99, 'stock_quantity': 20, 'weight': 0.75}
+  ✅ CREATED new product: DS-900
+
+Row 17: ['Monitor Arm', 'MA-300', 'Ergonomic dual monitor arm with cable management', '129.99', '35', '5.2']
+  Extracted data: {'name': 'Monitor Arm', 'sku': 'MA-300', 'description': 'Ergonomic dual monitor arm with cable management', 'price': 129.99, 'stock_quantity': 35, 'weight': 5.2}
+  ✅ CREATED new product: MA-300
+
+Row 18: ['Laptop Stand', 'LS-200', 'Aluminum laptop stand with adjustable height', '49.99', '90', '0.85']
+  Extracted data: {'name': 'Laptop Stand', 'sku': 'LS-200', 'description': 'Aluminum laptop stand with adjustable height', 'price': 49.99, 'stock_quantity': 90, 'weight': 0.85}
+  ✅ CREATED new product: LS-200
+
+Row 19: ['Desk Mat', 'DM-150', 'Large leather desk mat with wireless charging spot', '79.99', '110', '1.3']
+  Extracted data: {'name': 'Desk Mat', 'sku': 'DM-150', 'description': 'Large leather desk mat with wireless charging spot', 'price': 79.99, 'stock_quantity': 110, 'weight': 1.3}
+  ✅ CREATED new product: DM-150
+
+Row 20: ['Document Scanner', 'DS-500', 'High-speed document scanner with ADF', '399.99', '10', '3.8']
+  Extracted data: {'name': 'Document Scanner', 'sku': 'DS-500', 'description': 'High-speed document scanner with ADF', 'price': 399.99, 'stock_quantity': 10, 'weight': 3.8}
+  ✅ CREATED new product: DS-500
+
+Row 21: ['Conference Speaker', 'CS-800', '360° conference speaker with noise cancellation', '299.99', '18', '0.92']
+  Extracted data: {'name': 'Conference Speaker', 'sku': 'CS-800', 'description': '360° conference speaker with noise cancellation', 'price': 299.99, 'stock_quantity': 18, 'weight': 0.92}
+  ✅ CREATED new product: CS-800
+
+Row 22: ['Graphics Card', 'GC-3080', 'High-end gaming graphics card with 12GB GDDR6', '899.99', '5', '1.5']
+  Extracted data: {'name': 'Graphics Card', 'sku': 'GC-3080', 'description': 'High-end gaming graphics card with 12GB GDDR6', 'price': 899.99, 'stock_quantity': 5, 'weight': 1.5}
+  ✅ CREATED new product: GC-3080
+
+Row 23: ['RAM 32GB Kit', 'RAM-3200', 'DDR4 32GB (2x16GB) 3200MHz CL16 memory kit', '129.99', '65', '0.12']
+  Extracted data: {'name': 'RAM 32GB Kit', 'sku': 'RAM-3200', 'description': 'DDR4 32GB (2x16GB) 3200MHz CL16 memory kit', 'price': 129.99, 'stock_quantity': 65, 'weight': 0.12}
+  ✅ CREATED new product: RAM-3200
+
+Row 24: ['CPU Cooler', 'CC-360', 'AIO liquid CPU cooler with RGB fans', '139.99', '30', '1.45']
+  Extracted data: {'name': 'CPU Cooler', 'sku': 'CC-360', 'description': 'AIO liquid CPU cooler with RGB fans', 'price': 139.99, 'stock_quantity': 30, 'weight': 1.45}
+  ✅ CREATED new product: CC-360
+
+Row 25: ['PC Case Mid Tower', 'PC-5000', 'Tempered glass mid tower case with RGB fans', '149.99', '22', '8.2']
+  Extracted data: {'name': 'PC Case Mid Tower', 'sku': 'PC-5000', 'description': 'Tempered glass mid tower case with RGB fans', 'price': 149.99, 'stock_quantity': 22, 'weight': 8.2}
+  ✅ CREATED new product: PC-5000
+
+Row 26: ['Power Supply 750W', 'PS-750', '80+ Gold certified fully modular power supply', '129.99', '28', '2.1']
+  Extracted data: {'name': 'Power Supply 750W', 'sku': 'PS-750', 'description': '80+ Gold certified fully modular power supply', 'price': 129.99, 'stock_quantity': 28, 'weight': 2.1}
+  ✅ CREATED new product: PS-750
+
+Row 27: ['Motherboard ATX', 'MB-550', 'ATX motherboard with PCIe 4.0 and Wi-Fi 6', '249.99', '15', '1.8']
+  Extracted data: {'name': 'Motherboard ATX', 'sku': 'MB-550', 'description': 'ATX motherboard with PCIe 4.0 and Wi-Fi 6', 'price': 249.99, 'stock_quantity': 15, 'weight': 1.8}
+  ✅ CREATED new product: MB-550
+
+Row 28: ['NVMe SSD 2TB', 'NVME-2000', 'PCIe 4.0 NVMe SSD with heatsink', '229.99', '40', '0.06']
+  Extracted data: {'name': 'NVMe SSD 2TB', 'sku': 'NVME-2000', 'description': 'PCIe 4.0 NVMe SSD with heatsink', 'price': 229.99, 'stock_quantity': 40, 'weight': 0.06}
+  ✅ CREATED new product: NVME-2000
+
+Row 29: ['Gaming Chair', 'GC-1000', 'Ergonomic gaming chair with lumbar support and headrest', '399.99', '12', '25.5']
+  Extracted data: {'name': 'Gaming Chair', 'sku': 'GC-1000', 'description': 'Ergonomic gaming chair with lumbar support and headrest', 'price': 399.99, 'stock_quantity': 12, 'weight': 25.5}
+  ✅ CREATED new product: GC-1000
+
+Row 30: ['Streaming Mic', 'SM-900', 'Professional streaming microphone with pop filter', '299.99', '25', '0.85']
+  Extracted data: {'name': 'Streaming Mic', 'sku': 'SM-900', 'description': 'Professional streaming microphone with pop filter', 'price': 299.99, 'stock_quantity': 25, 'weight': 0.85}
+  ✅ CREATED new product: SM-900
+
+Row 31: ['Ring Light', 'RL-600', '18" LED ring light with phone holder and tripod', '89.99', '45', '2.3']
+  Extracted data: {'name': 'Ring Light', 'sku': 'RL-600', 'description': '18" LED ring light with phone holder and tripod', 'price': 89.99, 'stock_quantity': 45, 'weight': 2.3}
+  ✅ CREATED new product: RL-600
+

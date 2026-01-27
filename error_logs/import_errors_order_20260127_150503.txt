@@ -1,0 +1,160 @@
+Order Import Error Log - 2026-01-27 15:05:04
+================================================================================
+
+Encoding: utf-8
+Delimiter: ','
+IMPORT MODE: REPLACE (Deleted 0 existing orders)
+Header: ['customer_email', 'product_sku', 'quantity', 'order_date', 'status', 'total_amount']
+Column Mapping: {'customer_email': 0, 'product_sku': 1, 'quantity': 2, 'order_date': 3, 'status': 4, 'total_amount': 5}
+--------------------------------------------------------------------------------
+
+Row 2: Product with SKU 'LP-1000' not foundRow 4: Customer with email 'robert.johnson@example.com' not foundRow 9: Product with SKU 'UCH-400' not foundRow 10: Customer with email 'david.taylor@example.com' not foundRow 24: Product with SKU 'SH-800' not foundRow 25: Product with SKU 'AF-500' not foundRow 26: Product with SKU 'SB-400' not foundRow 2: ['john.doe@example.com', 'LP-1000', '1', '2024-02-14 09:30:00', 'delivered', '1299.99']
+  Extracted data: {'customer_email': 'john.doe@example.com', 'product_sku': 'LP-1000', 'quantity': 1, 'order_date': '2024-02-14 09:30:00', 'status': 'delivered', 'total_amount': 1299.99}
+  ❌ VALIDATION ERROR: Product not found
+     • Product with SKU 'LP-1000' not found
+     Data: {'customer_email': 'john.doe@example.com', 'product_sku': 'LP-1000', 'quantity': 1, 'order_date': datetime.datetime(2024, 2, 14, 9, 30, tzinfo=zoneinfo.ZoneInfo(key='Asia/Hong_Kong')), 'status': 'delivered', 'total_amount': Decimal('1299.99')}
+
+Row 3: ['jane.smith@example.com', 'WM-200', '3', '2024-02-15 14:25:00', 'shipped', '89.97']
+  Extracted data: {'customer_email': 'jane.smith@example.com', 'product_sku': 'WM-200', 'quantity': 3, 'order_date': '2024-02-15 14:25:00', 'status': 'shipped', 'total_amount': 89.97}
+  ✅ CREATED new order #191 for jane.smith@example.com
+     Product: Wireless Mouse, Quantity: 3
+     Total: $89.97
+
+Row 4: ['robert.johnson@example.com', 'MN-2700', '2', '2024-02-16 11:15:00', 'processing', '999.98']
+  Extracted data: {'customer_email': 'robert.johnson@example.com', 'product_sku': 'MN-2700', 'quantity': 2, 'order_date': '2024-02-16 11:15:00', 'status': 'processing', 'total_amount': 999.98}
+  ❌ VALIDATION ERROR: Customer not found
+     • Customer with email 'robert.johnson@example.com' not found
+     Data: {'customer_email': 'robert.johnson@example.com', 'product_sku': 'MN-2700', 'quantity': 2, 'order_date': datetime.datetime(2024, 2, 16, 11, 15, tzinfo=zoneinfo.ZoneInfo(key='Asia/Hong_Kong')), 'status': 'processing', 'total_amount': Decimal('999.98')}
+
+Row 5: ['alice.brown@example.com', 'KB-500', '1', '2024-02-17 16:40:00', 'pending', '89.99']
+  Extracted data: {'customer_email': 'alice.brown@example.com', 'product_sku': 'KB-500', 'quantity': 1, 'order_date': '2024-02-17 16:40:00', 'status': 'pending', 'total_amount': 89.99}
+  ✅ CREATED new order #192 for alice.brown@example.com
+     Product: Keyboard Mechanical, Quantity: 1
+     Total: $89.99
+
+Row 6: ['charlie.wilson@example.com', 'WC-800', '4', '2024-02-18 10:20:00', 'delivered', '239.96']
+  Extracted data: {'customer_email': 'charlie.wilson@example.com', 'product_sku': 'WC-800', 'quantity': 4, 'order_date': '2024-02-18 10:20:00', 'status': 'delivered', 'total_amount': 239.96}
+  ✅ CREATED new order #193 for charlie.wilson@example.com
+     Product: Webcam HD, Quantity: 4
+     Total: $239.96
+
+Row 7: ['emma.davis@example.com', 'GH-900', '2', '2024-02-19 13:45:00', 'shipped', '299.98']
+  Extracted data: {'customer_email': 'emma.davis@example.com', 'product_sku': 'GH-900', 'quantity': 2, 'order_date': '2024-02-19 13:45:00', 'status': 'shipped', 'total_amount': 299.98}
+  ✅ CREATED new order #194 for emma.davis@example.com
+     Product: Gaming Headset, Quantity: 2
+     Total: $299.98
+
+Row 8: ['michael.miller@example.com', 'SSD-1000', '1', '2024-02-20 08:55:00', 'processing', '129.99']
+  Extracted data: {'customer_email': 'michael.miller@example.com', 'product_sku': 'SSD-1000', 'quantity': 1, 'order_date': '2024-02-20 08:55:00', 'status': 'processing', 'total_amount': 129.99}
+  ✅ CREATED new order #195 for michael.miller@example.com
+     Product: External SSD 1TB, Quantity: 1
+     Total: $129.99
+
+Row 9: ['sarah.wilson@example.com', 'UCH-400', '5', '2024-02-21 15:10:00', 'delivered', '329.95']
+  Extracted data: {'customer_email': 'sarah.wilson@example.com', 'product_sku': 'UCH-400', 'quantity': 5, 'order_date': '2024-02-21 15:10:00', 'status': 'delivered', 'total_amount': 329.95}
+  ❌ VALIDATION ERROR: Product not found
+     • Product with SKU 'UCH-400' not found
+     Data: {'customer_email': 'sarah.wilson@example.com', 'product_sku': 'UCH-400', 'quantity': 5, 'order_date': datetime.datetime(2024, 2, 21, 15, 10, tzinfo=zoneinfo.ZoneInfo(key='Asia/Hong_Kong')), 'status': 'delivered', 'total_amount': Decimal('329.95')}
+
+Row 10: ['david.taylor@example.com', 'PB-2000', '2', '2024-02-22 09:25:00', 'pending', '159.98']
+  Extracted data: {'customer_email': 'david.taylor@example.com', 'product_sku': 'PB-2000', 'quantity': 2, 'order_date': '2024-02-22 09:25:00', 'status': 'pending', 'total_amount': 159.98}
+  ❌ VALIDATION ERROR: Customer not found
+     • Customer with email 'david.taylor@example.com' not found
+     Data: {'customer_email': 'david.taylor@example.com', 'product_sku': 'PB-2000', 'quantity': 2, 'order_date': datetime.datetime(2024, 2, 22, 9, 25, tzinfo=zoneinfo.ZoneInfo(key='Asia/Hong_Kong')), 'status': 'pending', 'total_amount': Decimal('159.98')}
+
+Row 11: ['olivia.martinez@example.com', 'BS-600', '1', '2024-02-23 14:40:00', 'shipped', '89.99']
+  Extracted data: {'customer_email': 'olivia.martinez@example.com', 'product_sku': 'BS-600', 'quantity': 1, 'order_date': '2024-02-23 14:40:00', 'status': 'shipped', 'total_amount': 89.99}
+  ✅ CREATED new order #196 for olivia.martinez@example.com
+     Product: Bluetooth Speaker, Quantity: 1
+     Total: $89.99
+
+Row 12: ['james.anderson@example.com', 'TB-1050', '3', '2024-02-24 11:55:00', 'processing', '1049.97']
+  Extracted data: {'customer_email': 'james.anderson@example.com', 'product_sku': 'TB-1050', 'quantity': 3, 'order_date': '2024-02-24 11:55:00', 'status': 'processing', 'total_amount': 1049.97}
+  ✅ CREATED new order #197 for james.anderson@example.com
+     Product: Tablet 10.5", Quantity: 3
+     Total: $1,049.97
+
+Row 13: ['sophia.thomas@example.com', 'SW-700', '1', '2024-02-25 16:10:00', 'delivered', '199.99']
+  Extracted data: {'customer_email': 'sophia.thomas@example.com', 'product_sku': 'SW-700', 'quantity': 1, 'order_date': '2024-02-25 16:10:00', 'status': 'delivered', 'total_amount': 199.99}
+  ✅ CREATED new order #198 for sophia.thomas@example.com
+     Product: Smart Watch, Quantity: 1
+     Total: $199.99
+
+Row 14: ['benjamin.jackson@example.com', 'PR-800', '2', '2024-02-26 09:25:00', 'shipped', '499.98']
+  Extracted data: {'customer_email': 'benjamin.jackson@example.com', 'product_sku': 'PR-800', 'quantity': 2, 'order_date': '2024-02-26 09:25:00', 'status': 'shipped', 'total_amount': 499.98}
+  ✅ CREATED new order #199 for benjamin.jackson@example.com
+     Product: Printer All-in-One, Quantity: 2
+     Total: $499.98
+
+Row 15: ['emily.white@example.com', 'RT-6000', '1', '2024-02-27 14:40:00', 'pending', '179.99']
+  Extracted data: {'customer_email': 'emily.white@example.com', 'product_sku': 'RT-6000', 'quantity': 1, 'order_date': '2024-02-27 14:40:00', 'status': 'pending', 'total_amount': 179.99}
+  ✅ CREATED new order #200 for emily.white@example.com
+     Product: Router Wi-Fi 6, Quantity: 1
+     Total: $179.99
+
+Row 16: ['daniel.harris@example.com', 'DS-900', '1', '2024-02-28 11:55:00', 'processing', '299.99']
+  Extracted data: {'customer_email': 'daniel.harris@example.com', 'product_sku': 'DS-900', 'quantity': 1, 'order_date': '2024-02-28 11:55:00', 'status': 'processing', 'total_amount': 299.99}
+  ✅ CREATED new order #201 for daniel.harris@example.com
+     Product: Docking Station, Quantity: 1
+     Total: $299.99
+
+Row 17: ['ava.martin@example.com', 'GC-3080', '1', '2024-02-29 16:10:00', 'delivered', '899.99']
+  Extracted data: {'customer_email': 'ava.martin@example.com', 'product_sku': 'GC-3080', 'quantity': 1, 'order_date': '2024-02-29 16:10:00', 'status': 'delivered', 'total_amount': 899.99}
+  ✅ CREATED new order #202 for ava.martin@example.com
+     Product: Graphics Card, Quantity: 1
+     Total: $899.99
+
+Row 18: ['matthew.thompson@example.com', 'RAM-3200', '2', '2024-03-01 09:25:00', 'shipped', '259.98']
+  Extracted data: {'customer_email': 'matthew.thompson@example.com', 'product_sku': 'RAM-3200', 'quantity': 2, 'order_date': '2024-03-01 09:25:00', 'status': 'shipped', 'total_amount': 259.98}
+  ✅ CREATED new order #203 for matthew.thompson@example.com
+     Product: RAM 32GB Kit, Quantity: 2
+     Total: $259.98
+
+Row 19: ['chloe.garcia@example.com', 'CC-360', '1', '2024-03-02 14:40:00', 'pending', '139.99']
+  Extracted data: {'customer_email': 'chloe.garcia@example.com', 'product_sku': 'CC-360', 'quantity': 1, 'order_date': '2024-03-02 14:40:00', 'status': 'pending', 'total_amount': 139.99}
+  ✅ CREATED new order #204 for chloe.garcia@example.com
+     Product: CPU Cooler, Quantity: 1
+     Total: $139.99
+
+Row 20: ['ethan.rodriguez@example.com', 'PC-5000', '2', '2024-03-03 11:55:00', 'processing', '299.98']
+  Extracted data: {'customer_email': 'ethan.rodriguez@example.com', 'product_sku': 'PC-5000', 'quantity': 2, 'order_date': '2024-03-03 11:55:00', 'status': 'processing', 'total_amount': 299.98}
+  ✅ CREATED new order #205 for ethan.rodriguez@example.com
+     Product: PC Case Mid Tower, Quantity: 2
+     Total: $299.98
+
+Row 21: ['mia.lee@example.com', 'PS-750', '3', '2024-03-04 16:10:00', 'delivered', '389.97']
+  Extracted data: {'customer_email': 'mia.lee@example.com', 'product_sku': 'PS-750', 'quantity': 3, 'order_date': '2024-03-04 16:10:00', 'status': 'delivered', 'total_amount': 389.97}
+  ✅ CREATED new order #206 for mia.lee@example.com
+     Product: Power Supply 750W, Quantity: 3
+     Total: $389.97
+
+Row 22: ['alexander.walker@example.com', 'GC-1000', '1', '2024-03-05 09:25:00', 'shipped', '399.99']
+  Extracted data: {'customer_email': 'alexander.walker@example.com', 'product_sku': 'GC-1000', 'quantity': 1, 'order_date': '2024-03-05 09:25:00', 'status': 'shipped', 'total_amount': 399.99}
+  ✅ CREATED new order #207 for alexander.walker@example.com
+     Product: Gaming Chair, Quantity: 1
+     Total: $399.99
+
+Row 23: ['grace.hall@example.com', 'SM-900', '2', '2024-03-06 14:40:00', 'pending', '599.98']
+  Extracted data: {'customer_email': 'grace.hall@example.com', 'product_sku': 'SM-900', 'quantity': 2, 'order_date': '2024-03-06 14:40:00', 'status': 'pending', 'total_amount': 599.98}
+  ✅ CREATED new order #208 for grace.hall@example.com
+     Product: Streaming Mic, Quantity: 2
+     Total: $599.98
+
+Row 24: ['logan.allen@example.com', 'SH-800', '1', '2024-03-07 11:55:00', 'processing', '249.99']
+  Extracted data: {'customer_email': 'logan.allen@example.com', 'product_sku': 'SH-800', 'quantity': 1, 'order_date': '2024-03-07 11:55:00', 'status': 'processing', 'total_amount': 249.99}
+  ❌ VALIDATION ERROR: Product not found
+     • Product with SKU 'SH-800' not found
+     Data: {'customer_email': 'logan.allen@example.com', 'product_sku': 'SH-800', 'quantity': 1, 'order_date': datetime.datetime(2024, 3, 7, 11, 55, tzinfo=zoneinfo.ZoneInfo(key='Asia/Hong_Kong')), 'status': 'processing', 'total_amount': Decimal('249.99')}
+
+Row 25: ['zoe.young@example.com', 'AF-500', '1', '2024-03-08 16:10:00', 'delivered', '129.99']
+  Extracted data: {'customer_email': 'zoe.young@example.com', 'product_sku': 'AF-500', 'quantity': 1, 'order_date': '2024-03-08 16:10:00', 'status': 'delivered', 'total_amount': 129.99}
+  ❌ VALIDATION ERROR: Product not found
+     • Product with SKU 'AF-500' not found
+     Data: {'customer_email': 'zoe.young@example.com', 'product_sku': 'AF-500', 'quantity': 1, 'order_date': datetime.datetime(2024, 3, 8, 16, 10, tzinfo=zoneinfo.ZoneInfo(key='Asia/Hong_Kong')), 'status': 'delivered', 'total_amount': Decimal('129.99')}
+
+Row 26: ['lucas.king@example.com', 'SB-400', '4', '2024-03-09 09:25:00', 'shipped', '199.96']
+  Extracted data: {'customer_email': 'lucas.king@example.com', 'product_sku': 'SB-400', 'quantity': 4, 'order_date': '2024-03-09 09:25:00', 'status': 'shipped', 'total_amount': 199.96}
+  ❌ VALIDATION ERROR: Product not found
+     • Product with SKU 'SB-400' not found
+     Data: {'customer_email': 'lucas.king@example.com', 'product_sku': 'SB-400', 'quantity': 4, 'order_date': datetime.datetime(2024, 3, 9, 9, 25, tzinfo=zoneinfo.ZoneInfo(key='Asia/Hong_Kong')), 'status': 'shipped', 'total_amount': Decimal('199.96')}
+

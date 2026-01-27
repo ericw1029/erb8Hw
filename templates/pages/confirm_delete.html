@@ -1,0 +1,55 @@
+<!-- templates/confirm_delete.html -->
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card border-danger">
+                <div class="card-header bg-danger text-white">
+                    <h4 class="mb-0"><i class="bi bi-exclamation-triangle-fill"></i> Confirm Delete Action</h4>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-warning">
+                        <h5 class="alert-heading">Warning!</h5>
+                        <p>
+                            You are about to <strong>DELETE ALL {{ existing_count }} EXISTING ORDERS</strong> 
+                            before importing new data from "{{ csv_file_name }}".
+                        </p>
+                        <hr>
+                        <p class="mb-0">
+                            <strong>This action cannot be undone!</strong> All order history will be lost.
+                        </p>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h6>What will happen:</h6>
+                        <ul>
+                            <li>All {{ existing_count }} existing orders will be permanently deleted</li>
+                            <li>Product stock will be restored for all deleted orders</li>
+                            <li>New orders will be imported from the CSV file</li>
+                            <li>If import fails, orders will already be deleted!</li>
+                        </ul>
+                    </div>
+                    
+                    <form method="post">
+                        {% csrf_token %}
+                        <input type="hidden" name="model_type" value="{{ model_type }}">
+                        <input type="hidden" name="delete_option" value="{{ delete_option }}">
+                        <input type="hidden" name="confirm_delete" value="yes">
+                        <input type="hidden" name="csv_file" value="{{ csv_file_name }}">
+                        
+                        <div class="d-flex justify-content-between">
+                            <a href="{% url 'pages:index' %}" class="btn btn-secondary">
+                                <i class="bi bi-arrow-left"></i> Cancel - Go Back
+                            </a>
+                            <button type="submit" class="btn btn-danger">
+                                <i class="bi bi-trash-fill"></i> Yes, Delete All Orders and Import
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

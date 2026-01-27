@@ -1,0 +1,147 @@
+Customer Import Error Log - 2026-01-27 15:04:36
+================================================================================
+
+Encoding: utf-8
+Delimiter: ','
+Header: ['name', 'email', 'phone', 'address']
+Column Mapping: {'name': 0, 'email': 1, 'phone': 2, 'address': 3}
+--------------------------------------------------------------------------------
+
+Customer Import Error Log - 2026-01-27 15:04:36
+================================================================================
+
+Encoding: utf-8
+Delimiter: ','
+Total rows processed: 30
+Successful: 27
+Failed: 3
+Success rate: 90.0%
+Duplicates handled: Update existing
+--------------------------------------------------------------------------------
+
+Row 2: ['John Doe', 'john@example.com', '123-456-7890', '123 Main Street']
+  Extracted data: {'name': 'John Doe', 'email': 'john@example.com', 'phone': '123-456-7890', 'address': '123 Main Street'}
+  ✅ CREATED new customer: john@example.com
+
+Row 3: ['Jane Smith', 'jane@example.com', '111111111', '456 Oak Avenue']
+  Extracted data: {'name': 'Jane Smith', 'email': 'jane@example.com', 'phone': '111111111', 'address': '456 Oak Avenue'}
+  ✅ CREATED new customer: jane@example.com
+
+Row 4: ['Robert Johnson', 'robert@example.com', '+1(555)123-456888', '789 Pine Road']
+  Extracted data: {'name': 'Robert Johnson', 'email': 'robert@example.com', 'phone': '+1(555)123-456888', 'address': '789 Pine Road'}
+  ❌ VALIDATION FAILED:
+     • phone: Ensure this value has at most 15 characters (it has 17).
+     Raw data: {'name': 'Robert Johnson', 'email': 'robert@example.com', 'phone': '+1(555)123-456888', 'address': '789 Pine Road'}
+
+Row 5: ['Alice Brown', 'alice@example.com', '020 7946 0958', '321 Elm Street']
+  Extracted data: {'name': 'Alice Brown', 'email': 'alice@example.com', 'phone': '020 7946 0958', 'address': '321 Elm Street'}
+  ✅ CREATED new customer: alice@example.com
+
+Row 6: ['Charlie Wilson', 'charlie@example.com', '5551234567', '654 Maple Drive']
+  Extracted data: {'name': 'Charlie Wilson', 'email': 'charlie@example.com', 'phone': '5551234567', 'address': '654 Maple Drive'}
+  ✅ CREATED new customer: charlie@example.com
+
+Row 7: ['John Doe', 'john.doe@example.com', '123-456-7890', '123 Main Street', ' New York', ' NY 10001']
+  Extracted data: {'name': 'John Doe', 'email': 'john.doe@example.com', 'phone': '123-456-7890', 'address': '123 Main Street'}
+  ✅ CREATED new customer: john.doe@example.com
+
+Row 8: ['Jane Smith', 'jane.smith@example.com', '', '456 Oak Avenue', ' Los Angeles', ' CA 90001']
+  Extracted data: {'name': 'Jane Smith', 'email': 'jane.smith@example.com', 'phone': '', 'address': '456 Oak Avenue'}
+  ✅ CREATED new customer: jane.smith@example.com
+
+Row 9: ['Robert Johnson', 'robert.johnson@example.com', '+1 (555) 123-4567', '789 Pine Road', ' Chicago', ' IL 60601']
+  Extracted data: {'name': 'Robert Johnson', 'email': 'robert.johnson@example.com', 'phone': '+1 (555) 123-4567', 'address': '789 Pine Road'}
+  ❌ VALIDATION FAILED:
+     • phone: Ensure this value has at most 15 characters (it has 17).
+     Raw data: {'name': 'Robert Johnson', 'email': 'robert.johnson@example.com', 'phone': '+1 (555) 123-4567', 'address': '789 Pine Road'}
+
+Row 10: ['Alice Brown', 'alice.brown@example.com', '020 7946 0958', '321 Elm Street', ' London SW1A 1AA']
+  Extracted data: {'name': 'Alice Brown', 'email': 'alice.brown@example.com', 'phone': '020 7946 0958', 'address': '321 Elm Street'}
+  ✅ CREATED new customer: alice.brown@example.com
+
+Row 11: ['Charlie Wilson', 'charlie.wilson@example.com', '5551234567', '654 Maple Drive', ' Houston', ' TX 77001']
+  Extracted data: {'name': 'Charlie Wilson', 'email': 'charlie.wilson@example.com', 'phone': '5551234567', 'address': '654 Maple Drive'}
+  ✅ CREATED new customer: charlie.wilson@example.com
+
+Row 12: ['Emma Davis', 'emma.davis@example.com', '(617) 555-0123', '1010 Tech Park', ' Boston', ' MA 02108']
+  Extracted data: {'name': 'Emma Davis', 'email': 'emma.davis@example.com', 'phone': '(617) 555-0123', 'address': '1010 Tech Park'}
+  ✅ CREATED new customer: emma.davis@example.com
+
+Row 13: ['Michael Miller', 'michael.miller@example.com', '415-555-0198', '555 Silicon Valley Blvd', ' San Francisco', ' CA 94107']
+  Extracted data: {'name': 'Michael Miller', 'email': 'michael.miller@example.com', 'phone': '415-555-0198', 'address': '555 Silicon Valley Blvd'}
+  ✅ CREATED new customer: michael.miller@example.com
+
+Row 14: ['Sarah Wilson', 'sarah.wilson@example.com', '305-555-0167', '888 Ocean Drive', ' Miami', ' FL 33139']
+  Extracted data: {'name': 'Sarah Wilson', 'email': 'sarah.wilson@example.com', 'phone': '305-555-0167', 'address': '888 Ocean Drive'}
+  ✅ CREATED new customer: sarah.wilson@example.com
+
+Row 15: ['David Taylor', 'david.taylor@example.com', '+44 20 7123 4567', '25 Baker Street', ' London W1U 6BW']
+  Extracted data: {'name': 'David Taylor', 'email': 'david.taylor@example.com', 'phone': '+44 20 7123 4567', 'address': '25 Baker Street'}
+  ❌ VALIDATION FAILED:
+     • phone: Ensure this value has at most 15 characters (it has 16).
+     Raw data: {'name': 'David Taylor', 'email': 'david.taylor@example.com', 'phone': '+44 20 7123 4567', 'address': '25 Baker Street'}
+
+Row 16: ['Olivia Martinez', 'olivia.martinez@example.com', '512-555-0143', '777 Congress Ave', ' Austin', ' TX 78701']
+  Extracted data: {'name': 'Olivia Martinez', 'email': 'olivia.martinez@example.com', 'phone': '512-555-0143', 'address': '777 Congress Ave'}
+  ✅ CREATED new customer: olivia.martinez@example.com
+
+Row 17: ['James Anderson', 'james.anderson@example.com', '206-555-0189', '999 Pike Place', ' Seattle', ' WA 98101']
+  Extracted data: {'name': 'James Anderson', 'email': 'james.anderson@example.com', 'phone': '206-555-0189', 'address': '999 Pike Place'}
+  ✅ CREATED new customer: james.anderson@example.com
+
+Row 18: ['Sophia Thomas', 'sophia.thomas@example.com', '602-555-0176', '111 Desert Rd', ' Phoenix', ' AZ 85001']
+  Extracted data: {'name': 'Sophia Thomas', 'email': 'sophia.thomas@example.com', 'phone': '602-555-0176', 'address': '111 Desert Rd'}
+  ✅ CREATED new customer: sophia.thomas@example.com
+
+Row 19: ['Benjamin Jackson', 'benjamin.jackson@example.com', '+1 416 555 0199', '222 CN Tower St', ' Toronto', ' ON M5V 1J3']
+  Extracted data: {'name': 'Benjamin Jackson', 'email': 'benjamin.jackson@example.com', 'phone': '+1 416 555 0199', 'address': '222 CN Tower St'}
+  ✅ CREATED new customer: benjamin.jackson@example.com
+
+Row 20: ['Emily White', 'emily.white@example.com', '678-555-0154', '333 Peachtree St', ' Atlanta', ' GA 30308']
+  Extracted data: {'name': 'Emily White', 'email': 'emily.white@example.com', 'phone': '678-555-0154', 'address': '333 Peachtree St'}
+  ✅ CREATED new customer: emily.white@example.com
+
+Row 21: ['Daniel Harris', 'daniel.harris@example.com', '503-555-0132', '444 Rose Garden Way', ' Portland', ' OR 97201']
+  Extracted data: {'name': 'Daniel Harris', 'email': 'daniel.harris@example.com', 'phone': '503-555-0132', 'address': '444 Rose Garden Way'}
+  ✅ CREATED new customer: daniel.harris@example.com
+
+Row 22: ['Ava Martin', 'ava.martin@example.com', '303-555-0118', '555 Mountain View', ' Denver', ' CO 80202']
+  Extracted data: {'name': 'Ava Martin', 'email': 'ava.martin@example.com', 'phone': '303-555-0118', 'address': '555 Mountain View'}
+  ✅ CREATED new customer: ava.martin@example.com
+
+Row 23: ['Matthew Thompson', 'matthew.thompson@example.com', '214-555-0129', '666 Texas Star Blvd', ' Dallas', ' TX 75201']
+  Extracted data: {'name': 'Matthew Thompson', 'email': 'matthew.thompson@example.com', 'phone': '214-555-0129', 'address': '666 Texas Star Blvd'}
+  ✅ CREATED new customer: matthew.thompson@example.com
+
+Row 24: ['Chloe Garcia', 'chloe.garcia@example.com', '+34 91 123 4567', '777 Gran Via', ' Madrid 28013']
+  Extracted data: {'name': 'Chloe Garcia', 'email': 'chloe.garcia@example.com', 'phone': '+34 91 123 4567', 'address': '777 Gran Via'}
+  ✅ CREATED new customer: chloe.garcia@example.com
+
+Row 25: ['Ethan Rodriguez', 'ethan.rodriguez@example.com', '619-555-0165', '888 Harbor Dr', ' San Diego', ' CA 92101']
+  Extracted data: {'name': 'Ethan Rodriguez', 'email': 'ethan.rodriguez@example.com', 'phone': '619-555-0165', 'address': '888 Harbor Dr'}
+  ✅ CREATED new customer: ethan.rodriguez@example.com
+
+Row 26: ['Mia Lee', 'mia.lee@example.com', '408-555-0147', '999 Innovation Circle', ' San Jose', ' CA 95113']
+  Extracted data: {'name': 'Mia Lee', 'email': 'mia.lee@example.com', 'phone': '408-555-0147', 'address': '999 Innovation Circle'}
+  ✅ CREATED new customer: mia.lee@example.com
+
+Row 27: ['Alexander Walker', 'alexander.walker@example.com', '317-555-0158', '111 Speedway Ave', ' Indianapolis', ' IN 46225']
+  Extracted data: {'name': 'Alexander Walker', 'email': 'alexander.walker@example.com', 'phone': '317-555-0158', 'address': '111 Speedway Ave'}
+  ✅ CREATED new customer: alexander.walker@example.com
+
+Row 28: ['Grace Hall', 'grace.hall@example.com', '+61 2 1234 5678', '222 Opera House St', ' Sydney NSW 2000']
+  Extracted data: {'name': 'Grace Hall', 'email': 'grace.hall@example.com', 'phone': '+61 2 1234 5678', 'address': '222 Opera House St'}
+  ✅ CREATED new customer: grace.hall@example.com
+
+Row 29: ['Logan Allen', 'logan.allen@example.com', '702-555-0173', '333 Las Vegas Blvd', ' Las Vegas', ' NV 89109']
+  Extracted data: {'name': 'Logan Allen', 'email': 'logan.allen@example.com', 'phone': '702-555-0173', 'address': '333 Las Vegas Blvd'}
+  ✅ CREATED new customer: logan.allen@example.com
+
+Row 30: ['Zoe Young', 'zoe.young@example.com', '216-555-0182', '444 Rock & Roll Ave', ' Cleveland', ' OH 44114']
+  Extracted data: {'name': 'Zoe Young', 'email': 'zoe.young@example.com', 'phone': '216-555-0182', 'address': '444 Rock & Roll Ave'}
+  ✅ CREATED new customer: zoe.young@example.com
+
+Row 31: ['Lucas King', 'lucas.king@example.com', '615-555-0191', '555 Music Row', ' Nashville', ' TN 37203']
+  Extracted data: {'name': 'Lucas King', 'email': 'lucas.king@example.com', 'phone': '615-555-0191', 'address': '555 Music Row'}
+  ✅ CREATED new customer: lucas.king@example.com
+

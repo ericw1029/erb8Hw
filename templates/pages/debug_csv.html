@@ -1,0 +1,20 @@
+<!-- templates/debug_csv.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSV Debug</title>
+</head>
+<body>
+    <h1>Debug CSV Upload</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="csv_file" accept=".csv">
+        <button type="submit">Debug File</button>
+    </form>
+    
+    {% if debug_info %}
+        <h2>Debug Results:</h2>
+        <pre>{{ debug_info|pprint }}</pre>
+    {% endif %}
+</body>
+</html>
