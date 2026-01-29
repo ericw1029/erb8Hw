@@ -1,0 +1,21 @@
+customer_email,product_sku,quantity,order_date,status,total_amount
+john.doe@example.com,CS-800,1,2024-02-14 09:30:00,delivered,-1299.99
+jane.smith@example.com,WM-200,3,2024-02-15 14:25:00,shipped,-89.97
+john@example.com,MN-2700,2,2024-02-16 25:15:00,processing,999.98
+alice.brown@example.com,KB-500,1,2024-02-17 16:40:00,pending,89.99
+charlie.wilson@example.com,WC-800,4,2024-02-18 10:20:00,delivered,239.96
+emma.davis@example.com,GH-900,2,2024-02-19 13:45:00,shipped,299.98
+michael.miller@example.com,SSD-1000,1,2024-02-20 08:55:00,processing,129.99
+sarah.wilson@example.com,DS-500,5,2024-02-21 15:10:00,delivered,329.95
+robert@example.com,PB-2000,2,2024-02-22 09:25:00,pending,159.98
+olivia.martinez@example.com,BS-600,1,2024-02-23 14:40:00,shipped,89.99
+charlie@example.com,TB-1050,3,2024-02-24 11:55:00,processing,1049.97
+sophia.thomas@example.com,SW-700,1,2024-02-25 16:10:00,delivered,199.99
+benjamin.jackson@example.com,PR-800,2,2024-02-26 09:25:00,shipped,499.98
+emily.white@example.com,RT-6000,1,2024-02-27 14:40:00,pending,179.99
+daniel.harris@example.com,DS-900,1,2024-02-28 11:55:00,processing,299.99
+jane@example.com,MN-2700,1,2024-02-29 16:10:00,delivered,899.99
+robert.johnson@example.com,MA-300,2,2024-03-01 09:25:00,shipped,259.98
+sophia.thomas@example.com,GH-900,1,2024-03-02 14:40:00,pending,139.99
+michael.miller@example.com,CS-800,2,2024-03-03 11:55:00,processing,299.98
+david.taylor@example.com,PR-800,3,2024-03-04 16:10:00,delivered,389.97

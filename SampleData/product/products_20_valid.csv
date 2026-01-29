@@ -1,0 +1,21 @@
+name,sku,description,price,stock_quantity,weight
+Laptop Pro,LP-1000,High-performance business laptop with 16GB RAM| 512GB SSD| i7 processor,1299.99,50,2.5
+Wireless Mouse,WM-200,Ergonomic wireless mouse with rechargeable battery,29.99,200,0.2
+Monitor 27,MN-2700,4K UHD Monitor with HDR and 144Hz refresh rate,499.99,25,7.8
+Keyboard Mechanical,KB-500,Gaming mechanical keyboard with RGB backlight,89.99,75,1.1
+Webcam HD,WC-800,1080p Webcam with dual microphones and privacy shutter,59.99,100,0.3
+Gaming Headset,GH-900,Wireless gaming headset with 7.1 surround sound,149.99,30,0.45
+External SSD 1TB,SSD-1000,Portable NVMe SSD with USB-C 3.2 Gen 2,129.99,80,0.08
+USB-C Hub,UCH-400,7-in-1 USB-C Hub with 4K HDMI| PD charging,65.99,150,0.15
+Power Bank 20000mAh,PB-2000,High-capacity power bank with QC 3.0 and PD,79.99,120,0.35
+Bluetooth Speaker,BS-600,Portable waterproof Bluetooth speaker with 20hr battery,89.99,60,0.68
+Tablet 10.5,TB-1050,Android tablet with stylus support and 128GB storage,349.99,25,0.48
+Smart Watch,SW-700,Fitness smartwatch with GPS and heart rate monitor,199.99,45,0.05
+Printer All-in-One,PR-800,Wireless color printer with scanner and copier,249.99,15,9.5
+Router Wi-Fi 6,RT-6000,Wi-Fi 6 router with mesh capability and parental controls,179.99,40,1.2
+Docking Station,DS-900,Thunderbolt 4 docking station with dual 4K support,299.99,20,0.75
+Monitor Arm,MA-300,Ergonomic dual monitor arm with cable management,129.99,35,5.2
+Laptop Stand,LS-200,Aluminum laptop stand with adjustable height,49.99,90,0.85
+Desk Mat,DM-150,Large leather desk mat with wireless charging spot,79.99,110,1.3
+Document Scanner,DS-500,High-speed document scanner with ADF,399.99,10,3.8
+Conference Speaker,CS-800,360° conference speaker with noise cancellation,299.99,18,0.92
