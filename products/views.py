@@ -252,6 +252,7 @@ def import_products_with_validation(decoded_data, error_log_path, encoding="utf-
                                 error_log_content.append(f"  ⚠️ SKIPPED duplicate SKU: {cleaned_data['sku']}\n\n")
                                 error_count += 1
                                 error_details.append(f"Row {row_num}: Duplicate SKU - {cleaned_data['sku']}")
+                                success_count += 1
                                 continue
                         else:
                             # Create new product
@@ -263,10 +264,11 @@ def import_products_with_validation(decoded_data, error_log_path, encoding="utf-
                                 stock_quantity=cleaned_data["stock_quantity"],
                                 weight=cleaned_data.get("weight"),
                             )
+                            success_count += 1
                             error_log_content.append(f"  ✅ CREATED new product: {cleaned_data['sku']}\n\n")
                             
                         #print("error_log_content", error_log_content)
-                        success_count += 1
+                        
 
                     except Exception as db_error:
                         error_count += 1

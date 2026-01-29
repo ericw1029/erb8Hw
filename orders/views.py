@@ -260,8 +260,9 @@ def import_orders_with_validation(
                                         "action": "created",
                                     }
                                 )
+                                success_count += 1
 
-                            success_count += 1
+                            
                             total_order_value += float(cleaned_data["total_amount"])
 
                         except ValueError as e:

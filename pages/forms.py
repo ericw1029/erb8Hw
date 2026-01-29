@@ -6,8 +6,8 @@ import re
 
 class CSVImportForm(forms.Form):
     csv_file = forms.FileField(
-        label="CSV File",
-        help_text="Upload a CSV file with columns: title, author, published_date, price, in_stock",
+        label="Upload a CSV file",
+        help_text="",
         widget=forms.FileInput(attrs={"class": "form-control", "accept": ".csv"}),
     )
     MODEL_CHOICES = [

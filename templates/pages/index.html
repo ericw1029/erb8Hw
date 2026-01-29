@@ -5,10 +5,11 @@
  {% block title%} | Welcome {% endblock %}
 <!-- index main content -->
 {% block content %}
+{% include 'partials/_alert.html' %}
 <div class="container">
     <div class="container">
         <!-- Display messages -->       
-        {% include 'partials/_alert.html' %}
+        
         <!-- Import Section -->
         <div class="import-section">
             <h2>Import CSV File</h2>

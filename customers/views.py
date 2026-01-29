@@ -154,11 +154,12 @@ def import_customers_with_validation(decoded_data, error_log_path, encoding="utf
                                     phone=cleaned_data["phone"] or None,
                                     address=data.get("address") or None,
                                 )
+                                success_count += 1
                                 error_log_content.append(
                                     f"  ✅ CREATED new customer: {cleaned_data['email']}\n\n"
                                 )
 
-                            success_count += 1
+                            
 
                         except Exception as db_error:
                             error_count += 1

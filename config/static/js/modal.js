@@ -12,7 +12,7 @@ $(document).ready(function(){
         $('#deleteConfirmModal').modal("hide");
         setTimeout(()=>{
             window.location.href=$("#confirmDeleteBtn").attr("href");
-        },300);
+        },6000);
     });
 
 });
